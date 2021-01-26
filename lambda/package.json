@@ -1,0 +1,13 @@
+{
+  "name": "lambda",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:lambda:handler": "cd ./handler && yarn",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}

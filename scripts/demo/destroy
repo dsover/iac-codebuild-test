@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+. ./scripts/common
+
+terraform destroy -var-file=tfvars/$ENVIRONMENT.tfvars
