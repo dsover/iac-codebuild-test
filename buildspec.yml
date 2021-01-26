@@ -10,7 +10,7 @@ phases:
       - yarn
   pre_build:
     commands:
-      - cd lambda
+      - pwd
       - yarn test
   build:
     commands:
