@@ -11,6 +11,7 @@ phases:
       - cd lambda
       - yarn
       - yarn test
+      - cd -
   build:
     commands:
       - yarn demo:apply
