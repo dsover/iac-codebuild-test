@@ -6,13 +6,11 @@ phases:
       nodejs: 12
     commands:
       - yarn
-      - cd lambda
-      - yarn
   pre_build:
     commands:
-      - pwd
+      - cd lambda
+      - yarn
       - yarn test
   build:
     commands:
-      - pwd
       - yarn demo:apply
