@@ -4,8 +4,14 @@ phases:
   install:
     runtime-versions:
       nodejs: 12
-  build:
     commands:
+      - yarn
       - cd lambda
       - yarn
+  pre_build:
+    commands:
+      - cd lambda
       - yarn test
+  build:
+    commands:
+      - yarn demo:apply
