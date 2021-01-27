@@ -14,4 +14,4 @@ phases:
       - cd -
   build:
     commands:
-      - yarn demo:apply
+      - aws sts get-caller-identity
