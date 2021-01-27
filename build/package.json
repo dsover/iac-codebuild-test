@@ -1,5 +1,5 @@
 {
-  "name": "iac-codebuild-test",
+  "name": "build",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:dsover/iac-codebuild-test.git",
