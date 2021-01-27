@@ -4,19 +4,15 @@
 set -e
 export ENVIRONMENT=demo
 
-cd terraform/
+cd ../terraform/
 
 WORKING_DIR=$(pwd)
-
-TF_STATE_BUCKET=tf-state-cnn-zion-base
-TF_STATE_PROFILE=mss-cloud-news:aws-mss-cloud-news-devops
-TF_STATE_REGION=us-east-1
 
 ORG="cnn"
 TEAM="zion"
 APPLICATION="iac-codebuild-test"
 
-if aws sts get-caller-identity --profile $TF_STATE_PROFILE >/dev/null; then
+if aws sts get-caller-identity >/dev/null; then
     echo "Credentials are up-to-date."
 else
     echo "[ERROR] Credentials are not up-to-date."
@@ -28,6 +24,6 @@ echo "Team: \"${TEAM}\""
 echo "Application: \"${APPLICATION}\""
 echo "Environment: \"${ENVIRONMENT}\""
 WORKSPACE="${ORG}:${TEAM}:${APPLICATION}:${ENVIRONMENT}"
-
+terraform init
 terraform workspace select "$WORKSPACE" || terraform workspace new "$WORKSPACE"
 echo "Workspace: \"$(terraform workspace show)\""

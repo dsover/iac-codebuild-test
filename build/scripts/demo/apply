@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 echo "doing the apply"
-#. ./scripts/common
+. ./scripts/common
 #
 ## Build the lambda zip
-#cd ../lambda
-#yarn build:lambda:handler
-#cd $WORKING_DIR
+cd ../../lambda
+yarn build:lambda:handler
+cd $WORKING_DIR
 #
-#terraform apply -var-file=tfvars/$ENVIRONMENT.tfvars
+#terraform apply -var-file=tfvars/$ENVIRONMENT.tfvars $@

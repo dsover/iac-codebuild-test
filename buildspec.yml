@@ -4,8 +4,6 @@ phases:
   install:
     runtime-versions:
       nodejs: 12
-    commands:
-      - yarn
   pre_build:
     commands:
       - cd lambda
@@ -14,4 +12,6 @@ phases:
       - cd -
   build:
     commands:
-      - aws sts get-caller-identity
+      - cd build
+      - yarn
+      - yarn demo:apply -f
