@@ -24,6 +24,8 @@ echo "Team: \"${TEAM}\""
 echo "Application: \"${APPLICATION}\""
 echo "Environment: \"${ENVIRONMENT}\""
 WORKSPACE="${ORG}:${TEAM}:${APPLICATION}:${ENVIRONMENT}"
+echo $WORKSPACE
+pwd
 terraform init
 terraform workspace select "$WORKSPACE" || terraform workspace new "$WORKSPACE"
 echo "Workspace: \"$(terraform workspace show)\""
