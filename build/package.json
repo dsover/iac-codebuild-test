@@ -13,6 +13,6 @@
   },
   "devDependencies": {
     "scripty": "^2.0.0",
-    "@jahed/terraform": "0.13.5"
+    "@jahed/terraform": "0.13.0"
   }
 }
