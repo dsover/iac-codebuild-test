@@ -4,7 +4,7 @@ function write(text){
 }
 
 exports.handler = async (event, context) => {
-    write('Hello World');
+    write('Hello World with a change');
     return;
 };
 exports.write = write;

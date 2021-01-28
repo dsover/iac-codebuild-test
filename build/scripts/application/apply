@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
+set -e
 
 echo "doing the apply"
+. ./scripts/application/common
 . ./scripts/common
 #
 ## Build the lambda zip
