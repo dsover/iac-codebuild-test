@@ -8,4 +8,4 @@ cd ../../lambda
 yarn build:lambda:handler
 cd $WORKING_DIR
 #
-terraform plan -var-file=tfvars/$ENVIRONMENT.tfvars
+terraform apply -var-file=tfvars/$ENVIRONMENT.tfvars $@
