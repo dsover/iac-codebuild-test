@@ -43,12 +43,12 @@ data "aws_iam_policy_document" "lambda" {
 }
 
 resource "aws_iam_role" "lambda" {
-  name               = "iac-${var.application}-main-role"
+  name               = "${var.application}-main-role"
   assume_role_policy = data.aws_iam_policy_document.lambda_assume_role.json
 }
 
 resource "aws_iam_policy" "lambda" {
-  name   = "iac-${var.application}-cloudwatch-policy"
+  name   = "${var.application}-cloudwatch-policy"
   policy = data.aws_iam_policy_document.lambda.json
 }
 
