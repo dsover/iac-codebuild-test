@@ -6,10 +6,10 @@
   "author": "Alex Sover <alex.sover@turner.com>",
   "license": "MIT",
   "scripts": {
-    "demo:apply": "scripty",
-    "demo:destroy": "scripty",
-    "demo:output": "scripty",
-    "demo:plan": "scripty"
+    "application:apply": "scripty",
+    "application:destroy": "scripty",
+    "application:output": "scripty",
+    "application:plan": "scripty"
   },
   "devDependencies": {
     "scripty": "^2.0.0",

@@ -14,8 +14,8 @@ phases:
     commands:
       - cd build
       - yarn
-      - yarn demo:apply -auto-approve
-#      - yarn demo:destroy -auto-approve
+      - yarn application:apply -auto-approve
+#      - yarn application:destroy -auto-approve
 #      - echo $CODEBUILD_WEBHOOK_BASE_REF
 #      - echo $CODEBUILD_WEBHOOK_HEAD_REF
 #      - echo $CODEBUILD_WEBHOOK_TRIGGER
