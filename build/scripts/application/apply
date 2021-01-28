@@ -10,4 +10,5 @@ cd ../../lambda
 yarn build:lambda:handler
 cd $WORKING_DIR
 #
+export TF_LOG=TRACE
 terraform apply -var-file=tfvars/$ENVIRONMENT.tfvars $@
