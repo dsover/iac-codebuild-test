@@ -2,4 +2,4 @@
 
 . ./scripts/common
 
-terraform destroy -var-file=tfvars/$ENVIRONMENT.tfvars
+terraform destroy -var-file=tfvars/$ENVIRONMENT.tfvars $@
