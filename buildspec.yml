@@ -14,4 +14,4 @@ phases:
     commands:
       - cd build
       - yarn
-      - yarn demo:apply -f
+      - yarn demo:apply -auto-approve
