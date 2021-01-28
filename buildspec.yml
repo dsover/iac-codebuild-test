@@ -12,7 +12,6 @@ phases:
       - cd -
   build:
     commands:
-      - cat ./lambda/handler/index.js
       - cd build
       - yarn
       - yarn application:apply -auto-approve
