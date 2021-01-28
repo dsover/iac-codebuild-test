@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -e
+
+. ./scripts/codebuild/common
+. ../scripts/common
+
+terraform output

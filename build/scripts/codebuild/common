@@ -1,0 +1,2 @@
+export ENVIRONMENT=codebuild
+cd ./codebuild-infrastructure/

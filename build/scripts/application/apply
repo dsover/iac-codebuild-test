@@ -3,7 +3,7 @@ set -e
 
 echo "doing the apply"
 . ./scripts/application/common
-. ./scripts/common
+. ../scripts/common
 #
 ## Build the lambda zip
 cd ../../lambda

@@ -3,8 +3,6 @@
 # exit when any command fails
 set -e
 
-cd ./application-infrastructure/
-
 WORKING_DIR=$(pwd)
 ORG="cnn"
 TEAM="zion"
@@ -16,7 +14,6 @@ echo "Application: \"${APPLICATION}\""
 echo "Environment: \"${ENVIRONMENT}\""
 WORKSPACE="${ORG}:${TEAM}:${APPLICATION}:${ENVIRONMENT}"
 echo $WORKSPACE
-pwd
 terraform init
 terraform workspace select "$WORKSPACE" || terraform workspace new "$WORKSPACE"
 echo "Workspace: \"$(terraform workspace show)\""

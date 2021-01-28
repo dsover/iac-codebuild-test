@@ -13,55 +13,39 @@
         - include cross account permission for S3 state bucket
     
 
-
-
+>role for lambda terraform
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Effect": "Allow",
-            "Action": [
-                "cloudformation:DescribeStacks",
-                "cloudformation:ListStackResources",
-                "cloudwatch:ListMetrics",
-                "cloudwatch:GetMetricData",
-                "ec2:DescribeSecurityGroups",
-                "ec2:DescribeSubnets",
-                "ec2:DescribeVpcs",
-                "kms:ListAliases",
-                "iam:GetPolicy",
-                "iam:GetPolicyVersion",
-                "iam:GetRole",
-                "iam:GetRolePolicy",
-                "iam:ListAttachedRolePolicies",
-                "iam:ListRolePolicies",
-                "iam:ListRoles",
-                "lambda:*",
-                "logs:DescribeLogGroups",
-                "states:DescribeStateMachine",
-                "states:ListStateMachines",
-                "tag:GetResources"
-            ],
-            "Resource": "*"
-        },
-        {
+            "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": "iam:PassRole",
-            "Resource": "*",
+            "Resource": "arn:aws:iam::421654392560:role/iac-*",
             "Condition": {
                 "StringEquals": {
                     "iam:PassedToService": "lambda.amazonaws.com"
+                },
+                "StringLike": {
+                    "aws:PrincipalArn": "arn:aws:iam::421654392560:role/service-role/alex-build-test-role-3",
+                    "iam:AssociatedResourceARN": "arn:aws:lambda:*:421654392560:function:iac-*"
                 }
             }
         },
         {
+            "Sid": "VisualEditor1",
             "Effect": "Allow",
             "Action": [
-                "logs:DescribeLogStreams",
-                "logs:GetLogEvents",
-                "logs:FilterLogEvents"
+                "lambda:*"
             ],
-            "Resource": "arn:aws:logs:*:*:log-group:/aws/lambda/*"
+            "Resource": "arn:aws:lambda:*:421654392560:function:iac-*",
+            "Condition": {
+                "StringLike": {
+                    "aws:PrincipalArn": "arn:aws:iam::421654392560:role/service-role/alex-build-test-role-3"
+                }
+            }
         }
     ]
 }
+```

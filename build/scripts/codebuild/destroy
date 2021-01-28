@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
-. ./scripts/application/common
+. ./scripts/codebuild/common
 . ../scripts/common
 
 terraform destroy -var-file=tfvars/$ENVIRONMENT.tfvars $@

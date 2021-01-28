@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -e
+
+echo "doing the apply"
+. ./scripts/codebuild/common
+. ../scripts/common
+terraform apply -var-file=tfvars/$ENVIRONMENT.tfvars

@@ -1,1 +1,2 @@
-export ENVIRONMENT=demo
+export ENVIRONMENT=${ENVIRONMENT:-prod}
+cd ./application-infrastructure/

@@ -9,7 +9,11 @@
     "application:apply": "scripty",
     "application:destroy": "scripty",
     "application:output": "scripty",
-    "application:plan": "scripty"
+    "application:plan": "scripty",
+    "codebuild:apply": "scripty",
+    "condebuild:destroy": "scripty",
+    "codebuild:output": "scripty",
+    "codebuild:plan": "scripty"
   },
   "devDependencies": {
     "scripty": "^2.0.0",
