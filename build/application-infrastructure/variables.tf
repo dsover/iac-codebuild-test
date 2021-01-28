@@ -10,6 +10,11 @@ variable "application" {
   default     = "iac-codebuild-test"
 }
 
+variable "environment" {
+  description = "Application Environment"
+  type        = string
+}
+
 variable "aws_profile" {
   type        = string
   description = "AWS profile for the provider"
