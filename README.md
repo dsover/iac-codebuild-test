@@ -4,18 +4,8 @@
 this is a test repo for working with AWS code build/deploy/pipeline automation with git as the repo
 
 # What
--- Content Manger (K8S)
--- Snowplow (Fargate kinesis s3)
--- Skit (S3 firehose)
--- Keymaker (lambda)
--- Id Bridge (lambda kinesis apigateway)
+the structure of this repo is setup into a few parts... 
 
-- Lambdas
-- ECR (fargate)
-
-Terraform (deploy)
-    -
-- 
 
 # Code Pipeline
 - Service Role 

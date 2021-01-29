@@ -6,7 +6,7 @@ echo "doing the apply"
 . ../scripts/common
 #
 ## Build the lambda zip
-cd ../../lambda
+cd ../../src/lambda
 yarn build:lambda:handler
 cd $WORKING_DIR
 #export TF_LOG=TRACE
