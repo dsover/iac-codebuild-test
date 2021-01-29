@@ -31,3 +31,19 @@ resource "aws_codebuild_project" "codebuild" {
   queued_timeout = 480
   badge_enabled = true
 }
+
+resource "aws_codebuild_webhook" "example" {
+  project_name = aws_codebuild_project.codebuild.name
+
+  filter_group {
+    filter {
+      type    = "EVENT"
+      pattern = "PUSH"
+    }
+
+    filter {
+      type    = "HEAD_REF"
+      pattern = "main"
+    }
+  }
+}
