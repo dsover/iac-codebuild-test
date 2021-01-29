@@ -104,7 +104,7 @@ data "aws_iam_policy_document" "iam_pass_role_policy"{
   statement {
     effect = "Allow"
     actions = ["iam:PassRole"]
-    resources = ["arn:aws:iam::${local.account_id}:role/${var.application}*"]
+    resources = ["arn:aws:iam::${local.account_id}:role/${local.namespace}-build-role"]
     condition {
       test = "StringEquals"
       values = ["lambda.amazonaws.com"]
