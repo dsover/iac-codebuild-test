@@ -17,6 +17,7 @@ phases:
       - cd build
       - yarn
       - yarn application:apply -auto-approve
+      - echo $CODEBUILD_GIT_COMMIT
 #      - echo $CODEBUILD_WEBHOOK_BASE_REF
 #      - echo $CODEBUILD_WEBHOOK_HEAD_REF
 #      - echo $CODEBUILD_WEBHOOK_TRIGGER
