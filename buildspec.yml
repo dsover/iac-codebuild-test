@@ -4,6 +4,8 @@ phases:
   install:
     runtime-versions:
       nodejs: 12
+    commands:
+      - ./utils/set_git_envs
   pre_build:
     commands:
       - cd src/lambda
