@@ -110,11 +110,11 @@ data "aws_iam_policy_document" "iam_pass_role_policy"{
       values = ["lambda.amazonaws.com"]
       variable = "iam:PassedToService"
     }
-//    condition {
-//      test = "StringLike"
-//      values = ["arn:aws:iam::421654392560:role/cnn-zion-iac-codebuild-test-codebuild-build-role"]
-//      variable = "aws:PrincipalArn"
-//    }
+    condition {
+      test = "StringLike"
+      values = ["arn:aws:iam::421654392560:role/cnn-zion-iac-codebuild-test-codebuild-build-role"]
+      variable = "aws:PrincipalArn"
+    }
   }
 }
 resource "aws_iam_role_policy" "iam_pass_role_policy" {
