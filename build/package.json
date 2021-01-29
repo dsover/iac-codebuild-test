@@ -11,7 +11,7 @@
     "application:output": "scripty",
     "application:plan": "scripty",
     "codebuild:apply": "scripty",
-    "condebuild:destroy": "scripty",
+    "codebuild:destroy": "scripty",
     "codebuild:output": "scripty",
     "codebuild:plan": "scripty"
   },
