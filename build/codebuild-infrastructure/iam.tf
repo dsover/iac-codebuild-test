@@ -112,7 +112,7 @@ data "aws_iam_policy_document" "iam_pass_role_policy"{
     }
     condition {
       test = "StringLike"
-      values = ["arn:aws:iam::${local.account_id}:role/service-role/${local.namespace}-build-role"]
+      values = ["arn:aws:iam::421654392560:role/cnn-zion-iac-codebuild-test-codebuild-build-role"]
       variable = "aws:PrincipalArn"
     }
   }
