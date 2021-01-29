@@ -1,6 +1,6 @@
 function write(text){
     console.log(text)
-    return null;
+    return text;
 }
 
 exports.handler = async (event, context) => {
