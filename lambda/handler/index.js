@@ -1,10 +1,10 @@
 function write(text){
     console.log(text)
-    return text;
+    return null;
 }
 
 exports.handler = async (event, context) => {
-    write('Hello World I still work');
+    write('Hello World next step integration');
     return;
 };
 exports.write = write;
