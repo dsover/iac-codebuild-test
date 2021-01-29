@@ -6,7 +6,7 @@ phases:
       nodejs: 12
   pre_build:
     commands:
-      - cd lambda
+      - cd src/lambda
       - yarn
       - yarn test
       - cd -
